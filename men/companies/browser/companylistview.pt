@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="men.companies">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading" tal:content="context/title" />
+        
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <div tal:content="structure context/information/output|nothing" />
+
+        <div class="divCompany" tal:repeat="company view/companies">
+            <a tal:attributes="href company/url"
+                       tal:content="company/title">
+                [TITLE]
+            </a>
+            <div>
+              <span tal:content="company/description">
+                [DESCRIPTION]
+              </span>
+            </div>
+        </div>
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

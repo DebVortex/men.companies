@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="men.companies">
+    
+    <!-- Include configuration for dependencies listed in setup.py -->
+    <includeDependencies package="." />
+    <include package=".content" />
+    <include package=".browser" />
+    
+    <!-- Grok the package to initialise schema interfaces and content classes -->
+    <grok:grok package="." />
+    
+    <!-- Grok the package to initialise schema interfaces and content classes -->
+    <grok:grok package="." />
+
+    <!-- Register an extension profile to make the product installable -->
+    <genericsetup:registerProfile
+        name="default"
+        title="Companylist"
+        description="Companie List for the network for improvement of maintenance competences"
+        directory="profiles/default"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+    
+</configure>

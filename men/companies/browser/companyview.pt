@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  lang="en"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="men.companies">
+  <body>
+        <div metal:fill-slot="main" class="business-entry">
+            <tal:main-macro metal:define-macro="main">
+
+                <tal replace="structure provider:plone.abovecontenttitle"></tal>
+
+                <h1 class="documentFirstHeading" tal:content="context/title" />
+
+                <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+                <p class="documentDescription" tal:content="context/description" />
+
+                <!-- Here goes your stuff -->
+                
+                  <div class="divLogo">
+                    <img src="" tal:replace="structure context/@@images/logo|nothing">
+                  </div>
+
+                  <div class="divContact">
+                    Kontakt: <span tal:replace="context/contact"></span>
+                    <br />
+                    Telefon: <span tal:replace="context/telephone"></span>
+                    <br />
+                    E-Mail: <span tal:replace="context/email"></span>
+                    <br />
+                    <span tal:replace="context/address"></span>
+                  </div>
+                  <div class="visualClear"></div>
+                  <div class="divComment">
+                    <p  tal:content="context/comment" />
+                  </div>
+
+                <div class="visualClear"></div>
+
+            </tal:main-macro>
+        </div>
+    </body>
+</html>

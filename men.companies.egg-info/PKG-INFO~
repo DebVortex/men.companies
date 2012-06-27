@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: nimc.companies
+Version: 1.0
+Summary: UNKNOWN
+Home-page: https://github.com/DebVortex/nimc.companies
+Author: Benjamin Tessmar
+Author-email: benjamin.tessmar@it2009.ba-leipzig.de
+License: Free BSD
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        1.0dev (unreleased)
+        -------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python

@@ -1,0 +1,22 @@
+
+.divLogo{
+	float:left;
+	width:200px;
+	height:100px;
+    background-position: center center;
+}
+
+.divContact{
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #5fa398;
+	margin-left:220px;
+	padding:0 1em;
+	
+}
+
+.divComment{
+	both:clear;
+}

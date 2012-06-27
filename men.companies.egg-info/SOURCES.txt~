@@ -1,0 +1,16 @@
+README.txt
+setup.py
+nimc/__init__.py
+nimc.companies.egg-info/PKG-INFO
+nimc.companies.egg-info/SOURCES.txt
+nimc.companies.egg-info/dependency_links.txt
+nimc.companies.egg-info/entry_points.txt
+nimc.companies.egg-info/namespace_packages.txt
+nimc.companies.egg-info/not-zip-safe
+nimc.companies.egg-info/requires.txt
+nimc.companies.egg-info/top_level.txt
+nimc/companies/__init__.py
+nimc/companies/browser/__init__.py
+nimc/companies/content/__init__.py
+nimc/companies/content/company.py
+nimc/companies/content/list.py

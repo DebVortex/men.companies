@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    i18n_domain="men.companies">
+
+    <grok:grok package="." />
+
+    <browser:resourceDirectory
+        name="men.companies.stylesheets"
+        directory="stylesheets"
+    />
+
+    <browser:page
+        for="*"
+        name="companylistview"
+        template="companylistview.pt"
+        permission="zope2.View"
+        class=".views.CompanyListView"
+    />
+
+    <browser:page
+        for="*"
+        name="companyview"
+        template="companyview.pt"
+        permission="zope2.View"
+    />
+
+</configure>
